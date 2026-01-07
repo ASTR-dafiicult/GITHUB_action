@@ -8,21 +8,16 @@
           font-size: 1.5em;
         }
 
-          <style>
-.blink {
-  animation: blink-animation 1s steps(5, start) infinite;
-  color: #ff6600;
-}
-
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-</style>
-
-**My Name is GRE-YOURI and I like** ![Software Engineering](https://img.shields.io/badge/Software%20Engineering-%23ff6600?style=for-the-badge)
-
+        .blink {
+          animation: blink-animation 1s steps(5, start) infinite;
+        }
+        @keyframes blink-animation {
+          to {
+            visibility: hidden;
+          }
+        }
+      </style>
+      <strong>My Name is GRE-YOURI and I like <span class="blink">C/C++</span></strong>
 		</div>
 	</foreignObject>
 </svg>
