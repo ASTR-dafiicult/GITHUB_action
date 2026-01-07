@@ -1,23 +1,41 @@
-<svg fill="none" viewBox="800x60" width="800" height="60" xmlns="http://www.w3.org/2000/svg">
-	<foreignObject width="300%" height="300%">
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<style>
-        strong {
-          font-family: "Comic Sans", "Comic Sans MS", Chalkboard, ChalkboardSE-Regular, "Marker Felt", Purisa, "URW Chancery L", cursive, sans-serif;
-          color: limegreen;
-          font-size: 1.6em;
-        }
+<svg width="800" height="80" viewBox="0 0 800 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Rainbow animated gradient -->
+    <linearGradient id="cyberRainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="red">
+        <animate attributeName="stop-color" values="red;magenta;cyan;lime;yellow;red" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="blue">
+        <animate attributeName="stop-color" values="blue;yellow;magenta;cyan;lime;blue" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
 
-        .blink {
-          animation: blink-animation 2s steps(5, start) infinite;
-        }
-        @keyframes blink-animation {
-          to {
-            visibility: hidden;
-          }
-        }
-      </style>
-	<strong>My Name is GRE-YOURI and I like <span class="blink">'Software Engineering'</span></strong>
-		</div>
-	</foreignObject>
+    <!-- Glow filter -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="cyan"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="magenta"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="lime"/>
+    </filter>
+  </defs>
+
+  <!-- Main text -->
+  <text x="10" y="50" font-family="Comic Sans, Comic Sans MS, cursive" font-size="28" fill="url(#cyberRainbow)" filter="url(#neonGlow)">
+    My Name is GRE-YOURI and I like 
+    <tspan>
+      <!-- Cyberpunk animated 'Software Engineering' -->
+      <animateTransform attributeName="transform"
+                        type="scale"
+                        values="1;1.4;1" 
+                        dur="1.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform"
+                        type="rotate"
+                        values="0 450 50;15 450 50;-15 450 50;0 450 50"
+                        dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform"
+                        type="translate"
+                        values="0 0;0 -8;0 0;0 8;0 0"
+                        dur="2s" repeatCount="indefinite"/>
+      'Software Engineering'
+    </tspan>
+  </text>
 </svg>
