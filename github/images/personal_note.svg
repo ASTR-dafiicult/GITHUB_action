@@ -8,8 +8,9 @@
           font-size: 1.5em;
         }
 
-        .blink {
-          animation: blink-animation 1s steps(5, start) infinite;
+          .blink {
+  				animation: blink-animation 1s steps(5, start) infinite;
+  				color: #ff6600;
         }
         @keyframes blink-animation {
           to {
